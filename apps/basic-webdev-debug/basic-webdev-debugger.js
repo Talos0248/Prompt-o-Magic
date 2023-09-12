@@ -35,21 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const jsText = jsInput.value;
 
         // Create the formatted output
-        if (issueText == ""){
+        if (issueText.trim() == ""){
             formattedOutput += "Debug this code.\n\n"
         } else {
             formattedOutput += `Solve the following issues or perform these instructions: \n${issueText} \n\n`
         }
 
-        if (htmlText != ""){
+        if (htmlText.trim() != ""){
             formattedOutput += `Current HTML:\n${htmlText}\n\n`
         }
 
-        if (cssText != ""){
+        if (cssText.trim() != ""){
             formattedOutput += `Current CSS:\n${cssText}\n\n`
         }
 
-        if (jsText != ""){
+        if (jsText.trim() != ""){
             formattedOutput += `Current JavaScript:\n${jsText}\n\n`
         }
     
