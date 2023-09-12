@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const outputTextarea = document.getElementById('output');
     const generateButton = document.getElementById("generate");
     const copyButton = document.getElementById("copy");
-    const clearAllButton = document.getElementById("clear-all")
+    const clearAllButton = document.getElementById("clear-all");
+
+    
 
 });
