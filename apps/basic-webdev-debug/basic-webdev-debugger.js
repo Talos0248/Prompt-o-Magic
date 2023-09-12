@@ -9,12 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const issueClearButton = document.getElementById("clear-issue");
     const htmlClearButton = document.getElementById("clear-html");
     const cssClearButton = document.getElementById("clear-css");
-    const jsClearButton = document.getElementById("clear-javascript");
+    const jsClearButton = document.getElementById("clear-js");
 
+    const outputTextarea = document.getElementById('output');
     const generateButton = document.getElementById("generate");
     const copyButton = document.getElementById("copy");
 
-    // Clear Buttons
+    // Add an event Listener to each "clear" button
     function clear(target) {target.value = ""}
 
     issueClearButton.addEventListener("click", () => clear(issueInput));
@@ -53,18 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     
         // Display the formatted output in the textarea
-        const outputTextarea = document.getElementById('output');
         outputTextarea.textContent = formattedOutput;
     });
-    
-        // Add an event listener to each "Clear" button
-        // clearButtons.forEach(function (button) {
-        // button.addEventListener('click', function () {
-        //     const inputId = button.getAttribute('data-target');
-        //     const inputElement = document.getElementById(inputId);
-        //     inputElement.value = ''; // Clear the input field
-        // });
-        // });
   
     // Add an event listener to the "Copy" button
     copyButton.addEventListener('click', function () {
