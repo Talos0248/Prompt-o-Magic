@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const copyButton = document.getElementById("copy");
     const clearAllButton = document.getElementById("clear-all");
 
-    
+    generateButton.addEventListener("click")
 
 });

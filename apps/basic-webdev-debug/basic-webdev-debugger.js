@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener to the "Generate" button
     generateButton.addEventListener("click", function () {
 
-    let formattedOutput = ""
+        let formattedOutput = ""
 
         // Get user-entered values
         const issueText = issueInput.value;
@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     // Add an event listener to the "Copy" button
-    copyButton.addEventListener('click', function () {
-        const outputTextarea = document.getElementById('output');
+    copyButton.addEventListener("click", function () {
+        const outputTextarea = document.getElementById("output");
         outputTextarea.select();
         outputTextarea.setSelectionRange(0, 99999)
-        document.execCommand('copy'); // Copy the selected text to the clipboard
+        document.execCommand("copy"); // Copy the selected text to the clipboard
         copyButton.textContent = "Copied!"
         setTimeout(function(){copyButton.textContent = "Copy"}, 1000)
     });
