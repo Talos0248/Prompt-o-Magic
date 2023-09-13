@@ -19,35 +19,38 @@
 
     <h1>Assignment Idea Generator</h1>
     <div class="flex-wrapper content-container">
-        <div id="input-container" class="flex-wrapper input-container">
+        <div class="input-container flex-wrapper">
             <div id="left-input" class="flex-wrapper left-input">
                 <div class="text-field-container">
-                    <label for="subject">Subject</label>
+                    <label for="subject" class="block-label">Subject</label>
                     <input type="text" name="subject" id="subject" placeholder="e.g., Physics; English">
                 </div>
 
                 <div class="text-field-container">
-                    <label for="topic">Topic</label>
+                    <label for="topic" class="block-label">Topic</label>
                     <input type="text" name="topic" id="topic" placeholder="e.g., Density; Vocabulary">
                 </div>
                 <div class="text-field-container">
-                    <label for="assignment-type">Assignment Type</label>
+                    <label for="assignment-type" class="block-label">Assignment Type</label>
                     <input type="text" name="assignment-type" id="assignment-type"
                         placeholder="e.g., Essay; Presentation">
                 </div>
                 <div class="text-field-container">
-                    <label for="academic-level">Academic Level</label>
+                    <label for="academic-level" class="block-label">Academic Level</label>
                     <input type="text" name="academic-level" id="academic-level"
                         placeholder="e.g., Grade 9; Undergraduate">
                 </div>
                 <div class="text-field-container">
-                    <label for="format">Tone/Format</label>
+                    <label for="format" class="block-label">Tone/Format</label>
                     <input type="text" name="format" id="format" placeholder="e.g., Academic; Freeform">
                 </div>
-                <div class="group-container">
+                <div class="group-container flex-wrapper">
                     <div class="group-radio-container">
-                        <input type="radio" name="group-radio" id="solo" value="Solo">
-                        <label for="solo">Individual Project</label>
+                        <div class="group-option-container">
+                            <input type="radio" name="group-radio" id="solo" value="Solo">
+                            <label for="solo">Individual Project</label>
+                        </div>
+                        <div class="group-option-container"></div>
                         <input type="radio" name="group-radio" id="group" value="Group" checked>
                         <label for="group">Group Project</label>
                     </div>
@@ -60,44 +63,53 @@
             </div>
             <div class="additional-details-container">
                 <div class="interdisciplinary-container">
-                    <label for="interdisciplinary-checkbox">
-                        <input type="checkbox" id="interdisciplinary-checkbox"> Interdisciplinary?
-                    </label>
+                    <div>
+                        <label for="interdisciplinary-checkbox">
+                            <input type="checkbox" id="interdisciplinary-checkbox"> Interdisciplinary?
+                        </label>
+                    </div>
                     <input type="text" id="discipline" disabled placeholder="Enter disciplines (Optional)">
                 </div>
                 <div class="rubric-container">
-                    <label for="rubric-checkbox">
-                        <input type="checkbox" id="rubric-checkbox"> Generate Rubric?
-                    </label>
+                    <div>
+                        <label for="rubric-checkbox">
+                            <input type="checkbox" id="rubric-checkbox"> Generate Rubric?
+                        </label>
+                    </div>
                     <label for="max-score">Max Score:</label>
                     <input type="text" id="max-score" disabled placeholder="e.g., 20">
                 </div>
-                <label for="single-idea-radio">
-                    <input type="radio" name="idea-count" value="single" id="single-idea-radio"> Single
-                    Idea (More Detail)
-                </label>
-
-                <label for="multiple-ideas-radio">
-                    <input type="radio" name="idea-count" value="multiple" id="multiple-ideas-radio" checked>
-                    Multiple Ideas (Less Detail)
-                </label>
+                <div>
+                    <div>
+                        <label for="single-idea-radio">
+                            <input type="radio" name="idea-count" value="single" id="single-idea-radio"> Single
+                            Idea (More Detail)
+                        </label>
+                    </div>
+                    <div>
+                        <label for="multiple-ideas-radio">
+                            <input type="radio" name="idea-count" value="multiple" id="multiple-ideas-radio" checked>
+                            Multiple Ideas (Less Detail)
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="textareas-container">
+            <div class="textareas-container flex-wrapper">
                 <div class="learning-objectives-container">
-                    <label for="learning-objectives">Learning Objectives:</label>
+                    <label for="learning-objectives" class="block-label">Learning Objectives:</label>
                     <textarea name="learning-objectives" id="learning-objectives" cols="30" rows="10"
                         placeholder="e.g., students will be able to analyze complex issues and propose effective solutions based on research and critical thinking"></textarea>
                 </div>
                 <div class="additional-requirements-container">
-                    <label for="additional-requirements">Additional Requirements:</label>
+                    <label for="additional-requirements" class="block-label">Additional Requirements:</label>
                     <textarea name="additional-requirements" id="additional-requirements" cols="30" rows="10"
                         placeholder="Enter additional requirements here."></textarea>
                 </div>
             </div>
         </div>
-        <div id="output-container" class="flex-wrapper">
+        <div id="output-container" class="flex-wrapper output-container">
             <div>
-                <label for="output">Output:</label>
+                <label for="output" class="block-label">Output:</label>
                 <textarea name="output" id="output" cols="30" rows="10"></textarea>
             </div>
             <div>
@@ -107,6 +119,7 @@
             </div>
         </div>
     </div>
+
     <script src="assignment-idea-generator.js"></script>
 </body>
 
