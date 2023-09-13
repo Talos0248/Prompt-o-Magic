@@ -13,12 +13,18 @@ body {
     margin-right: auto;
     font-size: larger;
     justify-content: center;
-    background-image: url("../../src/backgrounds/gradient1.avif");
+    background-image: url("../../src/backgrounds/gradient2.avif");
+    background-size:cover;
 }
 
 h1 {
     text-align: center;
-    margin: 1em auto;
+    margin: 0.2em auto;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.42);
+    -webkit-text-stroke: 3px #bcbcbc89;
 }
 
 input::placeholder {
@@ -58,7 +64,7 @@ input::placeholder {
     justify-content: center;
     margin: 2%;
     box-shadow: 3px 4px 4px 4px rgba(128, 128, 128, 0.265);
-    background-color: rgba(255, 240, 249, 0.936);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -74,7 +80,7 @@ input::placeholder {
 .additional-details-container,
 .textareas-container {
     flex: 1 1 50%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .additional-details-container {
@@ -106,7 +112,6 @@ input::placeholder {
 
 .textareas-container {
     justify-content: center;
-    margin-top: 2rem;
 }
 
 .learning-objectives-container,
