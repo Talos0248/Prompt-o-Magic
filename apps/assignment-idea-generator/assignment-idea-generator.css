@@ -1,0 +1,22 @@
+* {
+    box-sizing:border-box;
+    /* background-color: aqua; */
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-container {
+    max-width: 70%;
+}
+
+.left-input {
+    max-width: 60%;
+}
+
+.left-input > div > div {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
