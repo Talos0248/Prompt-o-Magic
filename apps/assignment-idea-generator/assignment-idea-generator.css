@@ -18,6 +18,14 @@ h1 {
     text-align: center;
 }
 
+.input-textarea {
+    width: min(28rem,100%);
+}
+
+.output-textarea{
+    width:100%;
+}
+
 .block-label {
     display:  block;
 }
@@ -35,18 +43,18 @@ h1 {
 
 
 .left-input > div {
-    flex-basis: 50%;
+    flex-basis: 45%;
     flex-grow: 0;
+    margin-left: 1rem;
 }
 
 .left-input, .textareas-container{
     flex: 1 1 50%;
-    justify-content: space-between;
 }
 
 .input-container {
-    flex: 1 1 auto;
-    max-width: 60rem;
+    flex: 2 1 auto;
+    max-width: 65rem;
     justify-content: flex-start;
 }
 
@@ -55,14 +63,26 @@ h1 {
 } */
 
 .output-container {
-    flex: 1 1 auto;
-    max-width: 20rem;
+    flex: 1 2 auto;
+    flex-direction: column;
+    margin:auto;
+    max-width: 24rem;
+    justify-content: center;
+}
+
+.output-text-container{
+    width: 90%;
 }
 
 .group-container{
     flex-direction: column;
 }
 
+.textareas-container {
+    justify-content: center;
+}
+
 .learning-objectives-container, .additional-requirements-container {
-    min-width: 49%;
+    width: max(46%,20rem);
+    margin: auto;
 }
