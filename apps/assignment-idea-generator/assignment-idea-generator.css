@@ -19,7 +19,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 0.2em auto;
+    margin: 1em auto;
     color: white;
     font-weight: bold;
     font-size: 3rem;
@@ -62,7 +62,7 @@ input::placeholder {
 
 .content-container {
     justify-content: center;
-    margin: 2%;
+    margin: 4%;
     box-shadow: 3px 4px 4px 4px rgba(128, 128, 128, 0.265);
     background-color: rgba(255, 255, 255, 0.7);
 }
@@ -79,24 +79,32 @@ input::placeholder {
 .left-input,
 .additional-details-container,
 .textareas-container {
-    flex: 1 1 50%;
     margin-top: 1rem;
+}
+
+.left-input{
+    flex: 1 1 60%;
 }
 
 .additional-details-container {
     flex-direction: column;
+    flex: 1 1 30%;
+}
+
+.textareas-container{
+    flex: 1 1 50%;
 }
 
 .input-container {
     flex: 2 1 auto;
-    max-width: 70rem;
+    max-width: 65rem;
     justify-content: flex-start;
 }
 
 .output-container {
     flex: 1 1 50%;
     margin: 3rem 2rem;
-    max-width: 20rem;
+    max-width: 25rem;
     justify-content: right;
 }
 
@@ -128,3 +136,12 @@ input::placeholder {
 .clear-all-btn {
     width: 50%;
 }
+
+.navbar-brand {
+margin-left:3%
+}
+
+.nav-right{
+    margin-right:3%
+}
+
