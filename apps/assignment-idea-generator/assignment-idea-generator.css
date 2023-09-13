@@ -11,12 +11,27 @@ body {
     max-width: 1920px;
     margin-left:auto;
     margin-right:auto;
+    font-size: larger;
     justify-content: center;
 }
 
 h1 {
     text-align: center;
 }
+
+input::placeholder {
+    font-size: medium;
+}
+
+.text-input{
+    width: 14rem;
+}
+
+.max-score, .group-size {
+    width: 8rem;
+    margin-left: 1rem;
+}
+
 
 .input-textarea {
     width: min(28rem,100%);
@@ -37,24 +52,29 @@ h1 {
 }
 
 .content-container {
- margin: 0 auto;
  justify-content: center;
 }
 
 
-.left-input > div {
-    flex-basis: 45%;
+.left-input > div, .additional-details-container > div {
+    flex-basis: 40%;
     flex-grow: 0;
-    margin-left: 1rem;
+    margin: 0.5rem 1rem 1rem 2rem;
+
 }
 
-.left-input, .textareas-container{
+.left-input, .additional-details-container, .textareas-container{
     flex: 1 1 50%;
+    margin-top: 2rem;
+}
+
+.additional-details-container{
+    flex-direction: column;
 }
 
 .input-container {
     flex: 2 1 auto;
-    max-width: 65rem;
+    max-width: 70rem;
     justify-content: flex-start;
 }
 
@@ -63,26 +83,35 @@ h1 {
 } */
 
 .output-container {
-    flex: 1 2 auto;
-    flex-direction: column;
-    margin:auto;
+    flex: 1 1 50%;
+    margin:3rem auto;
     max-width: 24rem;
-    justify-content: center;
+    justify-content:right;
 }
 
-.output-text-container{
-    width: 90%;
+.output-text-container, .output-btn-container {
+    width: 100%;
 }
 
 .group-container{
     flex-direction: column;
+    min-width: 14rem;
 }
 
 .textareas-container {
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .learning-objectives-container, .additional-requirements-container {
     width: max(46%,20rem);
     margin: auto;
+}
+
+.generate-btn {
+    width:min(30rem,100%);
+}
+
+.copy-btn, .clear-all-btn {
+    width: 50%;
 }
