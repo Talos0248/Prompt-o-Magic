@@ -1,48 +1,51 @@
 /* html {
-    font-size: 20px;
+font-size: 20px;
 } */
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
     /* background-color: aqua; */
 }
 
 body {
     max-width: 1920px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     font-size: larger;
     justify-content: center;
+    background-image: url("../../src/backgrounds/gradient1.avif");
 }
 
 h1 {
     text-align: center;
+    margin: 1em auto;
 }
 
 input::placeholder {
     font-size: medium;
 }
 
-.text-input{
+.text-input {
     width: 14rem;
 }
 
-.max-score, .group-size {
+.max-score,
+.group-size {
     width: 8rem;
     margin-left: 1rem;
 }
 
 
 .input-textarea {
-    width: min(28rem,100%);
+    width: min(28rem, 100%);
 }
 
-.output-textarea{
-    width:100%;
+.output-textarea {
+    width: 100%;
 }
 
 .block-label {
-    display:  block;
+    display: block;
 }
 
 .flex-wrapper {
@@ -52,23 +55,29 @@ input::placeholder {
 }
 
 .content-container {
- justify-content: center;
+    justify-content: center;
+    margin: 2%;
+    box-shadow: 3px 4px 4px 4px rgba(128, 128, 128, 0.265);
+    background-color: rgba(255, 240, 249, 0.936);
 }
 
 
-.left-input > div, .additional-details-container > div {
+.left-input>div,
+.additional-details-container>div {
     flex-basis: 40%;
     flex-grow: 0;
     margin: 0.5rem 1rem 1rem 2rem;
 
 }
 
-.left-input, .additional-details-container, .textareas-container{
+.left-input,
+.additional-details-container,
+.textareas-container {
     flex: 1 1 50%;
     margin-top: 2rem;
 }
 
-.additional-details-container{
+.additional-details-container {
     flex-direction: column;
 }
 
@@ -78,22 +87,19 @@ input::placeholder {
     justify-content: flex-start;
 }
 
-/* .input-container > div {
-    max-width: 30rem;
-} */
-
 .output-container {
     flex: 1 1 50%;
-    margin:3rem auto;
-    max-width: 24rem;
-    justify-content:right;
+    margin: 3rem 2rem;
+    max-width: 20rem;
+    justify-content: right;
 }
 
-.output-text-container, .output-btn-container {
+.output-text-container,
+.output-btn-container {
     width: 100%;
 }
 
-.group-container{
+.group-container {
     flex-direction: column;
     min-width: 14rem;
 }
@@ -103,15 +109,17 @@ input::placeholder {
     margin-top: 2rem;
 }
 
-.learning-objectives-container, .additional-requirements-container {
-    width: max(46%,20rem);
+.learning-objectives-container,
+.additional-requirements-container {
+    width: max(46%, 20rem);
     margin: auto;
 }
 
 .generate-btn {
-    width:min(30rem,100%);
+    width: min(30rem, 100%);
 }
 
-.copy-btn, .clear-all-btn {
+.copy-btn,
+.clear-all-btn {
     width: 50%;
 }

@@ -62,15 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (interdisciplinaryCheckbox.checked) formattedOutput += "The assignment should be interdisciplinary"
         if (discipline.value.trim() !== "") formattedOutput += ` and involve the following discipline(s): ${discipline.value}`
-        formattedOutput += ".\n\n"
+        if(interdisciplinaryCheckbox.checked||discipline.value.trim() !== "") formattedOutput += ".\n\n"
 
         if (rubricCheckbox.checked) formattedOutput += "Also generate a detailed grading rubric"
         if (maxScore.value.trim() !== "") formattedOutput += ` based on a maximum score of ${maxScore.value}`
-        formattedOutput += ".\n\n"
+        if(rubricCheckbox.checked||maxScore.value.trim()) formattedOutput += ".\n\n"
 
         if(learningObjectives.value.trim() !== "") formattedOutput +=  `The assignment should help students achieve the following learning objectives:\n${learningObjectives.value}\n\n`
         if(additionalRequirements.value.trim() !== "") formattedOutput += `The following additional requirements should be fulfilled:\n${additionalRequirements.value}\n\n`
-        outputTexAarea.value = formattedOutput;   
+        if(learningObjectives.value.trim() !== "" || additionalRequirements.value.trim() !== "") outputTexAarea.value = formattedOutput;   
     });
 
     // Add an event listener to the "Copy" button
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         outputTextarea.setSelectionRange(0, 99999)
         document.execCommand("copy"); // Copy the selected text to the clipboard
         copyButton.textContent = "Copied!"
-        setTimeout(function(){copyButton.textContent = "Copy"}, 1000)
+        setTimeout(function(){copyButton.textContent = "Copy"}, 2000)
     });
 
         // Add an event listener to the "Clear All" button
