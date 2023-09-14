@@ -4,7 +4,6 @@ font-size: 20px;
 
 * {
     box-sizing: border-box;
-    /* background-color: aqua; */
 }
 
 body {
@@ -13,7 +12,7 @@ body {
     margin-right: auto;
     font-size: larger;
     justify-content: center;
-    background-image: url("../../src/backgrounds/gradient2.avif");
+    background-image: url("../src/backgrounds/gradient2.avif");
     background-size:cover;
 }
 
@@ -37,8 +36,15 @@ input::placeholder {
 
 .max-score,
 .group-size {
-    width: 8rem;
     margin-left: 1rem;
+}
+
+.max-score{
+    width: 7rem;
+}
+
+.group-size{
+    width: 10.5rem;
 }
 
 
@@ -63,6 +69,7 @@ input::placeholder {
 .content-container {
     justify-content: center;
     margin: 4%;
+    border-radius: 16px;
     box-shadow: 3px 4px 4px 4px rgba(128, 128, 128, 0.265);
     background-color: rgba(255, 255, 255, 0.7);
 }
@@ -83,12 +90,12 @@ input::placeholder {
 }
 
 .left-input{
-    flex: 1 1 60%;
+    flex: 1 1 50%;
 }
 
 .additional-details-container {
     flex-direction: column;
-    flex: 1 1 30%;
+    flex: 1 1 25%;
 }
 
 .textareas-container{
@@ -97,15 +104,24 @@ input::placeholder {
 
 .input-container {
     flex: 2 1 auto;
-    max-width: 65rem;
+    max-width: 62rem;
     justify-content: flex-start;
 }
 
 .output-container {
     flex: 1 1 50%;
     margin: 3rem 2rem;
-    max-width: 25rem;
+    max-width: 24rem;
     justify-content: right;
+}
+
+@media only screen and (max-width: 1366px) {
+    .output-container{
+        max-width:max(80%,900px);
+    }
+    .output-textarea{
+        max-height: 16rem;
+    }
 }
 
 .output-text-container,
@@ -129,7 +145,7 @@ input::placeholder {
 }
 
 .generate-btn {
-    width: min(30rem, 100%);
+    width: 100%;
 }
 
 .copy-btn,

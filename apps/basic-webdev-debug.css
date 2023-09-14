@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    justify-content: center;
+    background-image: url("../src/backgrounds/gradient4.webp");
+    background-size:cover;
+}
+
+h1 {
+    text-align: center;
+    margin: 1em auto;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.42);
+    -webkit-text-stroke: 3px #bcbcbc89;
+}
+
+.content-container {
+    justify-content: space-around;
+    margin: 4%;
+    border-radius: 16px;
+    box-shadow: 3px 4px 4px 4px rgba(128, 128, 128, 0.265);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.input-container {
+    flex: 2 1 auto;
+    max-width: 60rem;
+    flex-direction: column;
+    margin: 3% 3%;
+}
+
+.output-container {
+    flex: 1 1 50%;
+    margin: 3% 3%;
+    max-width: 24rem;
+    justify-content: right;
+}
+
+.navbar-brand {
+    margin-left:3%
+}
+
+.nav-right{
+    margin-right:3%
+}
+
+.generate-btn {
+    width: 100%;
+}
+
+.copy-btn,
+.clear-all-btn {
+    width: 50%;
+}
+
+
+.block-label-container, .issue-input-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.del-btn{
+    border: 2px solid white;
+}
+
+.del-btn:hover{
+    background-color: white;
+}
+
+.code-input-container{
+    justify-content: space-between;
+}
+
+.issue-textarea{
+    width:100%;
+}
+

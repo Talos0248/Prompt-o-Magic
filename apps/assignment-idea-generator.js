@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     generateButton.addEventListener("click", function () {
         let formattedOutput = "";
 
-        formattedOutput += `Generate ${(singleIdeaRadio.checked) ? "a single, detailed assignment idea" : "a list of ideas"}`
+        formattedOutput += `Generate ${(singleIdeaRadio.checked) ? "a single, detailed assignment idea" : "a list of multiple ideas"}`
         formattedOutput += ` for ${(soloRadio.checked) ? "an individual" : "a group"} assignment`;
         if (groupSize.value.trim() !== "" && groupRadio.checked) formattedOutput += " with a group size of " + groupSize.value
         formattedOutput += ` based on the following criteria:\n\n`;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(learningObjectives.value.trim() !== "") formattedOutput +=  `The assignment should help students achieve the following learning objectives:\n${learningObjectives.value}\n\n`
         if(additionalRequirements.value.trim() !== "") formattedOutput += `The following additional requirements should be fulfilled:\n${additionalRequirements.value}\n\n`
-        if(learningObjectives.value.trim() !== "" || additionalRequirements.value.trim() !== "") outputTexAarea.value = formattedOutput;   
+        outputTexAarea.value = formattedOutput;   
     });
 
     // Add an event listener to the "Copy" button
