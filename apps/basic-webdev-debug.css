@@ -6,7 +6,7 @@ body {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
-    font-size: larger;
+    font-size: x-large;
     justify-content: center;
     background-image: url("../src/backgrounds/gradient4.webp");
     background-size:cover;
@@ -20,6 +20,10 @@ h1 {
     font-size: 3rem;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.42);
     -webkit-text-stroke: 3px #bcbcbc89;
+}
+
+textarea{
+    font-size: large;
 }
 
 .content-container {
@@ -40,13 +44,13 @@ h1 {
     flex: 2 1 auto;
     max-width: 60rem;
     flex-direction: column;
-    margin: 3% 3%;
+    margin: 3% auto;
 }
 
 .output-container {
-    flex: 1 1 50%;
+    flex: 1 1 auto;
     margin: 3% 3%;
-    max-width: 24rem;
+    max-width: 30rem;
     justify-content: right;
 }
 
@@ -68,26 +72,43 @@ h1 {
 }
 
 
-.block-label-container, .issue-input-container{
+.block-label-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.del-btn{
-    border: 2px solid white;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
 .del-btn:hover{
     background-color: white;
 }
 
+.del-btn > img{
+    width: 26px;
+}
+
 .code-input-container{
     justify-content: space-between;
 }
 
-.issue-textarea{
+.issue-textarea, .output-textarea{
     width:100%;
 }
 
+.issue-input-container, .code-container, .output-container{
+margin: 3%;
+}
+
+.code-container{
+    flex: 1 1 auto;
+}
+
+.code-textarea{
+    width: 100%;
+}
+
+.output-label{
+    margin-bottom: 1rem;
+}

@@ -31,33 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let formattedOutput = ""
 
-        // Get user-entered values
-        const issueText = issueInput.value;
-        const htmlText = htmlInput.value;
-        const cssText = cssInput.value;
-        const jsText = jsInput.value;
-
         // Create the formatted output
-        if (issueText.trim() === "") {
+        if (issueInput.value.trim() === "") {
             formattedOutput += "Debug this code.\n\n"
         } else {
-            formattedOutput += `Solve the following issues or perform these instructions: \n${issueText} \n\n`
+            formattedOutput += `Solve the following issues or perform these instructions: \n${issueInput.value} \n\n`
         }
 
-        if (htmlText.trim() !== "") {
-            formattedOutput += `Current HTML:\n${htmlText}\n\n`
+        if (htmlInput.value.trim() !== "") {
+            formattedOutput += `Current HTML:\n${htmlInput.value}\n\n`
         }
 
-        if (cssText.trim() !== "") {
-            formattedOutput += `Current CSS:\n${cssText}\n\n`
+        if (cssInput.value.trim() !== "") {
+            formattedOutput += `Current CSS:\n${cssInput.value}\n\n`
         }
 
-        if (jsText.trim() !== "") {
-            formattedOutput += `Current JavaScript:\n${jsText}\n\n`
+        if (jsInput.value.trim() !== "") {
+            formattedOutput += `Current JavaScript:\n${jsInput.value}\n\n`
         }
 
         // Display the formatted output in the textarea
-        outputTextarea.textContent = formattedOutput;
+        outputTextarea.value = formattedOutput;
     });
 
     // Add an event listener to the "Copy" button
@@ -74,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clearAllButton.addEventListener("click", function () {
         // Set the values of all input elements to an empty string
+        issueInput.value = "";
         htmlInput.value = "";
         cssInput.value = "";
         jsInput.value = "";
