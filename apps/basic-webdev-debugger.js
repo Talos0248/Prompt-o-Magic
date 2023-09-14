@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (jsInput.value.trim() !== "") {
-            formattedOutput += `Current JavaScript:\n${jsInput.value}\n\n`
+            formattedOutput += `Current JavaScript:\n${jsInput.value}\n\n`;
         }
 
         // Display the formatted output in the textarea
