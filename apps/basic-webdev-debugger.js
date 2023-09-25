@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cssClearButton = document.getElementById("clear-css");
     const jsClearButton = document.getElementById("clear-js");
 
-    const outputTextarea = document.getElementById('output');
+    const outputTextArea = document.getElementById('output');
     const generateButton = document.getElementById("generate");
     const copyButton = document.getElementById("copy");
     const clearAllButton = document.getElementById("clear-all");
@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Display the formatted output in the textarea
-        outputTextarea.value = formattedOutput;
+        outputTextArea.value = formattedOutput;
     });
 
     // Add an event listener to the "Copy" button
     copyButton.addEventListener("click", function () {
-        const outputTextarea = document.getElementById("output");
-        outputTextarea.select();
-        outputTextarea.setSelectionRange(0, 99999)
+        const outputTextArea = document.getElementById("output");
+        outputTextArea.select();
+        outputTextArea.setSelectionRange(0, 99999)
         document.execCommand("copy"); // Copy the selected text to the clipboard
         copyButton.textContent = "Copied!"
         setTimeout(function () {
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         jsInput.value = "";
 
         // Clear the output textarea
-        outputTextarea.value = "";
+        outputTextArea.value = "";
     });
 });
   

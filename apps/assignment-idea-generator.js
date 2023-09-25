@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const learningObjectives = document.getElementById("learning-objectives");
     const additionalRequirements = document.getElementById("additional-requirements");
 
-    const outputTexAarea = document.getElementById('output');
+    const outputTextArea = document.getElementById('output');
     const generateButton = document.getElementById("generate");
     const copyButton = document.getElementById("copy");
     const clearAllButton = document.getElementById("clear-all");
 
-    // Enaables extra fields when relevant buttons/checkboxes are checked
+    // Enables extra fields when relevant buttons/checkboxes are checked
     groupRadio.addEventListener('change', function () {
         groupSize.disabled = !this.checked;
     });
@@ -70,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(learningObjectives.value.trim() !== "") formattedOutput +=  `The assignment should help students achieve the following learning objectives:\n${learningObjectives.value}\n\n`
         if(additionalRequirements.value.trim() !== "") formattedOutput += `The following additional requirements should be fulfilled:\n${additionalRequirements.value}\n\n`
-        outputTexAarea.value = formattedOutput;   
+        outputTextArea.value = formattedOutput;
     });
 
     // Add an event listener to the "Copy" button
     copyButton.addEventListener("click", function () {
-        const outputTextarea = document.getElementById("output");
-        outputTextarea.select();
-        outputTextarea.setSelectionRange(0, 99999)
+        const outputTextArea = document.getElementById("output");
+        outputTextArea.select();
+        outputTextArea.setSelectionRange(0, 99999)
         document.execCommand("copy"); // Copy the selected text to the clipboard
         copyButton.textContent = "Copied!"
         setTimeout(function(){copyButton.textContent = "Copy"}, 2000)
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalRequirements.value = "";
     
         // Clear the output textarea
-        outputTextarea.value = "";
+        outputTextArea.value = "";
     });
 
 });

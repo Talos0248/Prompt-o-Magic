@@ -25,100 +25,103 @@
 </div>
 
 
-<h1>Assignment Idea Generator</h1>
+<h1>Writing Ideas Generator</h1>
 <main class="flex-wrapper content-container">
     <div class="input-container flex-wrapper">
         <div class="flex-wrapper left-input">
             <div class="text-field-container">
-                <label for="subject" class="block-label">Subject</label>
-                <input type="text" name="subject" id="subject" class="text-input" placeholder="e.g., Physics; English">
-            </div>
-
-            <div class="text-field-container">
-                <label for="genre" class="block-label">Genre</label>
-                <button id="randomize-genre" class="btn del-btn issue-del-btn"><img src="../src/icons/arrow-random.svg"
-                                                                                alt="Randomize Genre">
-                </button>
+                <div class="label-button">
+                    <label for="genre" class="block-label">Genre</label>
+                    <button id="randomize-genre" class="btn del-btn issue-del-btn"><img src="../src/icons/randomize.svg"
+                                                                                        alt="Randomize Genre">
+                    </button>
+                </div>
                 <input type="text" name="topic" id="genre" class="text-input" placeholder="e.g., Fantasy">
             </div>
             <div class="text-field-container">
-                <label for="assignment-type" class="block-label">Assignment Type</label>
-                <input type="text" name="assignment-type" id="assignment-type" class="text-input"
-                       placeholder="e.g., Essay; Presentation">
+                <div class="label-button">
+                    <label for="setting" class="block-label">Setting</label>
+                    <button id="randomize-setting" class="btn del-btn issue-del-btn"><img
+                            src="../src/icons/randomize.svg"
+                            alt="Randomize Setting">
+                    </button>
+                </div>
+                <input type="text" name="topic" id="setting" class="text-input" placeholder="e.g., Medieval Castle">
             </div>
             <div class="text-field-container">
-                <label for="academic-level" class="block-label">Academic Level</label>
-                <input type="text" name="academic-level" id="academic-level" class="text-input"
-                       placeholder="e.g., Grade 9; Undergraduate">
+                <div class="label-button">
+                    <label for="tone" class="block-label">Tone</label>
+                    <button id="randomize-tone" class="btn del-btn issue-del-btn"><img src="../src/icons/randomize.svg"
+                                                                                       alt="Randomize Tone">
+                    </button>
+                </div>
+                <input type="text" name="topic" id="tone" class="text-input" placeholder="e.g., Dark and Mysterious">
             </div>
             <div class="text-field-container">
-                <label for="format" class="block-label">Tone/Format</label>
-                <input type="text" name="format" id="format" class="text-input" placeholder="e.g., Academic; Freeform">
+                <div class="label-button">
+                    <label for="theme" class="block-label">Theme</label>
+                    <button id="randomize-theme" class="btn del-btn issue-del-btn"><img src="../src/icons/randomize.svg"
+                                                                                        alt="Randomize Theme">
+                    </button>
+                </div>
+                <input type="text" name="topic" id="theme" class="text-input" placeholder="e.g., Love and Betrayal">
             </div>
-            <div class="group-container flex-wrapper">
-                <div class="group-radio-container">
-                    <div class="group-option-container">
-                        <input type="radio" name="group-radio" id="solo" value="Solo">
-                        <label for="solo" class="radio-label">Individual Project</label>
-                    </div>
-                    <div class="group-option-container"></div>
-                    <input type="radio" name="group-radio" id="group" value="Group" checked>
-                    <label for="group" class="radio-label">Group Project</label>
+            <div class="text-field-container">
+                <div class="label-button">
+                    <label for="main-character" class="block-label">Main Character(s)</label>
+                    <button id="randomize-main-character" class="btn del-btn issue-del-btn"><img
+                            src="../src/icons/randomize.svg"
+                            alt="Randomize Main Character(s)">
+                    </button>
                 </div>
-                <div class="group-size-container">
-                    <label for="group-size">Size:</label>
-                    <input type="text" name="group-size" id="group-size" class="group-size" placeholder="e.g., 3; 2-5">
+                <input type="text" name="topic" id="main-character" class="text-input long-text-input"
+                       placeholder="e.g., King Charles, Lord of Seven Realms">
+            </div>
+            <div class="text-field-container">
+                <div class="label-button">
+                    <label for="character-motivation" class="block-label">Character Motivation(s)</label>
+                    <button id="randomize-character-motivation" class="btn del-btn issue-del-btn"><img
+                            src="../src/icons/randomize.svg"
+                            alt="Randomize Character Motivation(s)">
+                    </button>
                 </div>
+                <input type="text" name="topic" id="character-motivation" class="text-input long-text-input"
+                       placeholder="e.g., Revenge, Redemption, Love">
+            </div>
+            <div class="character-description-container">
+                <label for="character-description" class="block-label">Character Description:</label>
+                <textarea name="character-description" id="character-description" class="input-textarea" rows="7"
+                          placeholder="e.g., King Charles, ruler of seven realms, is a wise and just leader who faces challenges in maintaining peace and prosperity across his vast domains."></textarea>
+            </div>
+            <div class="radio-button-group">
+                <div class="radio-option">
+                    <input type="radio" id="single-idea" name="project-type" value="Single Idea">
+                    <label for="single-idea">Single Idea</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="idea-list" name="project-type" value="Idea List" checked>
+                    <label for="idea-list">Idea List</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="story" name="project-type" value="Story">
+                    <label for="story">Story</label>
+                </div>
+            </div>
+            <div class="world-information-container">
+                <label for="world-information" class="block-label">World Information:</label>
+                <textarea name="world-information" id="world-information" class="input-textarea" rows="7"
+                          placeholder="e.g., The fictional world in the story is a magical realm filled with mystical creatures and ancient artifacts."></textarea>
+            </div>
+            <div class="additional-information-container">
+                <label for="additional-information" class="block-label">Additional Information:</label>
+                <textarea name="additional-information" id="additional-information" class="input-textarea" rows="7"
+                          placeholder="e.g., Any other relevant details or background information about the story or characters."></textarea>
             </div>
 
-        </div>
-        <div class="additional-details-container flex-wrapper">
-            <div class="interdisciplinary-container">
-                <div>
-                    <label for="interdisciplinary-checkbox">
-                        <input type="checkbox" id="interdisciplinary-checkbox"> Interdisciplinary?
-                    </label>
-                </div>
-                <input type="text" id="discipline" class="text-input" disabled
-                       placeholder="Enter disciplines (Optional)">
-            </div>
-            <div class="rubric-container">
-                <div>
-                    <label for="rubric-checkbox">
-                        <input type="checkbox" id="rubric-checkbox"> Generate Rubric?
-                    </label>
-                </div>
-                <label for="max-score">Max Score:</label>
-                <input type="text" id="max-score" class="max-score" placeholder="e.g., 20" disabled>
-            </div>
-            <div>
-                <div>
-                    <label for="single-idea-radio">
-                        <input type="radio" name="idea-count" value="single" id="single-idea-radio"> Single
-                        Idea (More Detail)
-                    </label>
-                </div>
-                <div>
-                    <label for="multiple-ideas-radio">
-                        <input type="radio" name="idea-count" value="multiple" id="multiple-ideas-radio" checked>
-                        Multiple Ideas (Less Detail)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="textareas-container flex-wrapper">
-            <div class="learning-objectives-container">
-                <label for="learning-objectives" class="block-label">Learning Objectives:</label>
-                <textarea name="learning-objectives" id="learning-objectives" class="input-textarea" rows="7"
-                          placeholder="e.g., students will be able to analyze complex issues and propose effective solutions based on research and critical thinking"></textarea>
-            </div>
-            <div class="additional-requirements-container">
-                <label for="additional-requirements" class="block-label">Additional Requirements:</label>
-                <textarea name="additional-requirements" id="additional-requirements" class="input-textarea" rows="7"
-                          placeholder="Enter additional requirements here."></textarea>
-            </div>
+
         </div>
     </div>
+
     <div id="output-container" class="flex-wrapper output-container">
         <div class="output-text-container">
             <label for="output" class="block-label">Output:</label>
