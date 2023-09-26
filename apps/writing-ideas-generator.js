@@ -10,6 +10,11 @@ const worldInformation = document.getElementById('world-information');
 const additionalInformation = document.getElementById('additional-information');
 const output = document.getElementById('output');
 
+// Radio Buttons
+const singleIdeaRadio = document.getElementById("single-idea");
+const ideaListRadio = document.getElementById("idea-list");
+const storyRadio = document.getElementById("story");
+
 // Randomize Buttons
 const randomizeGenre = document.getElementById('randomize-genre');
 const randomizeSetting = document.getElementById('randomize-setting');
@@ -83,11 +88,87 @@ const mainCharactersArray = {
     "Zephyr Windwhisper, Air Elemental Guide": "An air elemental guide who can manipulate the winds and create paths through the sky. They are a guardian of travelers and a whisperer of secrets."
 };
 
+// Randomization
+function getRandomItemFromArray(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+
+function displayRandomItemInTextbox(array, textbox) {
+    textbox.value = getRandomItemFromArray(array);
+}
+
+// Example usage:
+randomizeGenre.addEventListener('click', () => {
+    displayRandomItemInTextbox(genresArray, genre);
+});
+
+randomizeSetting.addEventListener('click', () => {
+    displayRandomItemInTextbox(settingsArray, setting);
+});
+
+randomizeTone.addEventListener('click', () => {
+    displayRandomItemInTextbox(tonesArray, tone);
+});
+
+randomizeTheme.addEventListener('click', () => {
+    displayRandomItemInTextbox(themesArray, theme);
+});
+
+randomizeCharacterMotivation.addEventListener('click', () => {
+    displayRandomItemInTextbox(characterMotivationsArray, characterMotivation);
+});
+
+randomizeMainCharacter.addEventListener('click', function () {
+    let characterNames = Object.keys(mainCharactersArray);
+    let randomCharacterName = characterNames[Math.floor(Math.random() * characterNames.length)];
+    let randomCharacterDescription = mainCharactersArray[randomCharacterName];
+
+    mainCharacter.value = randomCharacterName;
+    characterDescription.value = randomCharacterDescription;
+})
 
 generateButton.addEventListener("click", function () {
 
-    let formattedOutput = ""
-
     // Create the formatted output
+    let formattedOutput = ""
+    formattedOutput += `Generate ${(singleIdeaRadio.checked) ? "a single, detailed writing idea with possible twists and arcs" : (ideaListRadio.checked) ? "a list of multiple writing ideas" : "a complete story synopsis"} based on the criteria below:\n\n`;
 
+    if (genre.value.trim() !== "") formattedOutput += `Genre: ${genre.value}\n`;
+    if (setting.value.trim() !== "") formattedOutput += `Setting: ${setting.value}\n`;
+    if (tone.value.trim() !== "") formattedOutput += `Tone: ${tone.value}\n`;
+    if (theme.value.trim() !== "") formattedOutput += `Theme: ${theme.value}\n`;
+    if (mainCharacter.value.trim() !== "") formattedOutput += `Main Character: ${mainCharacter.value}\n`;
+    if (characterMotivation.value.trim() !== "") formattedOutput += `Character Motivation: ${characterMotivation.value}\n`;
+    if (characterDescription.value.trim() !== "") formattedOutput += `Character Description: ${characterDescription.value}\n`;
+    if (worldInformation.value.trim() !== "") formattedOutput += `World Information: ${worldInformation.value}\n`;
+    if (additionalInformation.value.trim() !== "") formattedOutput += `Additional Information: ${additionalInformation.value}\n`;
+
+    outputTextArea.value = formattedOutput;
+});
+
+// Add an event listener to the "Copy" button
+copyButton.addEventListener("click", function () {
+    const outputTextArea = document.getElementById("output");
+    outputTextArea.select();
+    outputTextArea.setSelectionRange(0, 99999)
+    document.execCommand("copy"); // Copy the selected text to the clipboard
+    copyButton.textContent = "Copied!"
+    setTimeout(function(){copyButton.textContent = "Copy"}, 2000)
+});
+
+clearAllButton.addEventListener("click", function () {
+    // Clear the values of all input fields
+    genre.value = "";
+    setting.value = "";
+    tone.value = "";
+    theme.value = "";
+    mainCharacter.value = "";
+    characterMotivation.value = "";
+    characterDescription.value = "";
+    worldInformation.value = "";
+    additionalInformation.value = "";
+
+    // Clear the output text area
+    outputTextArea.value = "";
 });
