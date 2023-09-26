@@ -94,6 +94,7 @@ h1 {
 .output-container{
     display: flex;
     align-content: center;
+    padding-top: 1em;
 }
 
 .output-text-container,
