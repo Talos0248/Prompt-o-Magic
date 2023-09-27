@@ -88,6 +88,7 @@ h2{
 /*Content Div*/
 .content-div{
     background-color: white;
+    padding-bottom: 40px;
 }
 
 h3{
@@ -120,7 +121,7 @@ h3{
 .app-container {
     background-color: white;
     transition: background 0.2s ease-in-out;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border-radius: 70px;
     justify-content: center;
 }
@@ -168,7 +169,7 @@ h3{
     h2{
         font-size: 1.3em;
     }
-    .description{
+    .description, .app-description{
         font-size: medium;
     }
     .app-grid {
@@ -180,5 +181,10 @@ h3{
         grid-column: span 1;
         min-width: 0;
         margin: 0;
+    }
+
+    .app-heading
+    {
+        font-size: large;
     }
 }
