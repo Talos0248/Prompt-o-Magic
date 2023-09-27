@@ -1,3 +1,3 @@
-# Prompt-o-Matic
+# Prompt-o-Magic
 AI Prompt Generator
 Testy test

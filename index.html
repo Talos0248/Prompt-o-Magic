@@ -5,41 +5,51 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Prompt-o'-Magic | Structured Prompts for Effortless Creativity</title>'
+    <title>Prompt-o'-Magic | Structured Prompts for Effortless Creativity</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assignment-idea-generator.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/src/icons/sparkles.svg">
 </head>
 <body>
     <div class="header-div">
-        <nav>
+        <nav class="navbar">
             <a href="https://github.com/Talos0248/Prompt-o-Magic"><img src="src/icons/github-mark-white.svg"
-                                                                       alt="GitHub"></a>
+                                                                       alt="GitHub" class="github-icon"></a>
         </nav>
-        <h1>Prompt-o'-Magic</h1>
+        <h1><span class="main-header">Prompt-o'-Magic</span></h1>
         <h2>Structured Prompts for Effortless Creativity</h2>
-        <p>Efficient, fast, and simple to use. To get started, simply select one of our available tools below, key in
+        <p class="description">Efficient, fast, and simple to use. To get started, simply select one of our available tools below, key in
             relevant information, copy, and paste into your AI chatbot of choice! </p>
     </div>
-    <div>
-        <h3>Top Picks</h3>
+    <div class="content-div">
+        <h3>🔥 Top Picks! 🔥</h3>
         <div class="app-grid">
             <a href="apps/assignment-idea-generator.html">
-                <div class="app-container">
-                    <h4>Assignment Idea Generator</h4>
-                    <p>Generate assignment ideas for any topic and education level with rubrics</p>
+                <div class="border-wrap">
+                    <div class="app-container">
+                        <h4 class="app-heading">Assignment Idea Generator</h4>
+                        <p class="app-description">Generate assignment ideas for any topic and education level with rubrics support</p>
+                    </div>
                 </div>
-            </a><a href="">
-            <div class="app-container">
-                <h4></h4>
-                <p></p>
-            </div>
-        </a><a href="">
-            <div class="app-container">
-                <h4></h4>
-                <p></p>
-            </div>
-        </a>
+            </a>
+            <a href="apps/basic-webdev-debugger.html">
+                <div class="border-wrap">
+                    <div class="app-container">
+                        <h4 class="app-heading">Basic WebDev Debugger</h4>
+                        <p class="app-description">Conveniently state your issue and paste your HTML, CSS, and Javascript files</p>
+                    </div>
+                </div>
+            </a>
+            <a href="apps/writing-ideas-generator.html">
+                <div class="border-wrap">
+                    <div class="app-container">
+                        <h4 class="app-heading">Writing Ideas Generator</h4>
+                        <p class="app-description">Structured idea generation guide with randomization options to spark creativity</p>
+                    </div>
+                </div>
+            </a>
+        </div>
         </div>
     </div>
 </body>
