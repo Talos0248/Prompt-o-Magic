@@ -1,3 +1,4 @@
 # Prompt-o-Magic
-AI Prompt Generator
-Testy test
+## An AI prompt generator!
+
+### Accessible at: https://talos0248.github.io/Prompt-o-Magic/index.html
