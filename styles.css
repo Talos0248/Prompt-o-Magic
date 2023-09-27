@@ -62,10 +62,13 @@ h1, h2{
 
 h1{
     font-size: 4rem;
+    margin: 30px auto 42px;
+}
+
+.main-heading{
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.42);
     -webkit-text-stroke: 3px #bcbcbc89;
     color: white;
-    margin: 30px auto 42px;
 }
 
 h2{
