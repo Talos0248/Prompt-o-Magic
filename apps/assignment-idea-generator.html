@@ -24,17 +24,15 @@
         </div>
     </nav>
 </div>
-
-
 <h1>Assignment Idea Generator</h1>
-<div class="flex-wrapper content-container">
-    <div class="input-container flex-wrapper">
-        <div id="left-input" class="flex-wrapper left-input">
+<main class="content-container grid-wrapper">
+    <div class="input-container grid-wrapper">
+    <div class="top-input-container grid-wrapper">
+        <div id="left-input" class="left-input grid-wrapper">
             <div class="text-field-container">
                 <label for="subject" class="block-label">Subject</label>
                 <input type="text" name="subject" id="subject" class="text-input" placeholder="e.g., Physics; English">
             </div>
-
             <div class="text-field-container">
                 <label for="topic" class="block-label">Topic</label>
                 <input type="text" name="topic" id="topic" class="text-input" placeholder="e.g., Density; Vocabulary">
@@ -53,7 +51,7 @@
                 <label for="format" class="block-label">Tone/Format</label>
                 <input type="text" name="format" id="format" class="text-input" placeholder="e.g., Academic; Freeform">
             </div>
-            <div class="group-container flex-wrapper">
+            <div class="group-container">
                 <div class="group-radio-container">
                     <div class="group-option-container">
                         <input type="radio" name="group-radio" id="solo" value="Solo">
@@ -68,9 +66,8 @@
                     <input type="text" name="group-size" id="group-size" class="group-size" placeholder="e.g., 3; 2-5">
                 </div>
             </div>
-
         </div>
-        <div class="additional-details-container flex-wrapper">
+        <div class="additional-details-container grid-wrapper">
             <div class="interdisciplinary-container">
                 <div>
                     <label for="interdisciplinary-checkbox">
@@ -80,31 +77,34 @@
                 <input type="text" id="discipline" class="text-input" disabled
                        placeholder="Enter disciplines (Optional)">
             </div>
-            <div class="rubric-container">
-                <div>
-                    <label for="rubric-checkbox">
-                        <input type="checkbox" id="rubric-checkbox"> Generate Rubric?
-                    </label>
-                </div>
-                <label for="max-score">Max Score:</label>
-                <input type="text" id="max-score" class="max-score" placeholder="e.g., 20" disabled>
-            </div>
-            <div>
-                <div>
-                    <label for="single-idea-radio">
-                        <input type="radio" name="idea-count" value="single" id="single-idea-radio"> Single
-                        Idea (More Detail)
-                    </label>
+            <div class="collapse-half-grid grid-wrapper">
+                <div class="rubric-container">
+                    <div>
+                        <label for="rubric-checkbox">
+                            <input type="checkbox" id="rubric-checkbox"> Generate Rubric?
+                        </label>
+                    </div>
+                    <label for="max-score">Max Score:</label>
+                    <input type="text" id="max-score" class="max-score" placeholder="e.g., 20" disabled>
                 </div>
                 <div>
-                    <label for="multiple-ideas-radio">
-                        <input type="radio" name="idea-count" value="multiple" id="multiple-ideas-radio" checked>
-                        Multiple Ideas (Less Detail)
-                    </label>
+                    <div>
+                        <label for="single-idea-radio">
+                            <input type="radio" name="idea-count" value="single" id="single-idea-radio"> Single
+                            Idea (More Detail)
+                        </label>
+                    </div>
+                    <div>
+                        <label for="multiple-ideas-radio">
+                            <input type="radio" name="idea-count" value="multiple" id="multiple-ideas-radio" checked>
+                            Multiple Ideas (Less Detail)
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="textareas-container flex-wrapper">
+    </div>
+        <div class="textareas-container grid-wrapper">
             <div class="learning-objectives-container">
                 <label for="learning-objectives" class="block-label">Learning Objectives:</label>
                 <textarea name="learning-objectives" id="learning-objectives" class="input-textarea" rows="7"
@@ -117,18 +117,21 @@
             </div>
         </div>
     </div>
-    <div id="output-container" class="flex-wrapper output-container">
+
+    <div id="output-container" class="output-container">
         <div class="output-text-container">
             <label for="output" class="block-label">Output:</label>
-            <textarea name="output" id="output" class="output-textarea" rows="15"></textarea>
+            <textarea name="output" id="output" class="output-textarea" rows="14"></textarea>
         </div>
-        <div class="flex-wrapper output-btn-container">
+        <div class="output-btn-container">
             <button id="generate" class="btn generate-btn btn-primary">Generate</button>
-            <button id="copy" class="btn copy-btn btn-secondary">Copy</button>
-            <button id="clear-all" class="btn clear-all-btn btn-danger">Clear All Fields</button>
+            <div class="half-grid grid-wrapper">
+                <button id="copy" class="btn copy-btn btn-secondary">Copy</button>
+                <button id="clear-all" class="btn clear-all-btn btn-danger">Clear All Fields</button>
+            </div>
         </div>
     </div>
-</div>
+</main>
 
 <script src="assignment-idea-generator.js"></script>
 </body>
